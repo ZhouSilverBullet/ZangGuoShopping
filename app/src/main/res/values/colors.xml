@@ -3,4 +3,6 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="ch_black_alpha_title">#FF202020</color>
+    <color name="ch_color_download_normal_title">#FF20ca57</color>
 </resources>

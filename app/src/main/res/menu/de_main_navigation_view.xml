@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/de_main_bottom_navigation_news"
+        android:title="@string/zg_main_navigation_news"
+        android:icon="@drawable/zg_main_menu_news_selector"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/de_main_bottom_navigation_guangchang"
+        android:title="@string/zg_main_navigation_square"
+        android:icon="@drawable/zg_main_menu_guangchang_selector"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/de_main_bottom_navigation_find"
+        android:title="@string/zg_main_navigation_find"
+        android:icon="@drawable/zg_main_menu_find_selector"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/de_main_bottom_navigation_mine"
+        android:title="@string/zg_main_navigation_mine"
+        android:icon="@drawable/zg_main_menu_mine_selector"
+        android:visible="true" />
+</menu>

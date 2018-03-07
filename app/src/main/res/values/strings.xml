@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ZangGuoShopping</string>
+    <string name="zg_main_navigation_news">新闻</string>
+    <string name="zg_main_navigation_square">广场</string>
+    <string name="zg_main_navigation_find">发现</string>
+    <string name="zg_main_navigation_mine">我的</string>
 </resources>
