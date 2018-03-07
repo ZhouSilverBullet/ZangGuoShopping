@@ -66,7 +66,7 @@ public class HomeActivity extends AppCompatActivity {
                 return true;
             }
         });
-        mBottomNavigation.setSelectedItemId(R.id.de_main_bottom_navigation_category);
+        mBottomNavigation.setSelectedItemId(R.id.de_main_bottom_navigation_home);
         Badge badge = new QBadgeView(this).bindTarget(findViewById(R.id.de_main_bottom_navigation_category));
         badge.setBadgeTextSize(12, true);
         badge.setGravityOffset(10, 0, true);

@@ -29,7 +29,7 @@ public class CategoryFragment extends Fragment {
     @BindView(R.id.zg_fragment_category_right_frame_layout)
     FrameLayout mCategoryFrameLayout;
     Unbinder unbinder;
-    private CategoryRecyclerViewAdapter adapter;
+    private CategoryRecyclerViewAdapter2 adapter;
 
     @Nullable
     @Override
@@ -45,13 +45,8 @@ public class CategoryFragment extends Fragment {
         for (int i = 0; i < 20; i++) {
             list.add("tab" + i);
         }
-        adapter = new CategoryRecyclerViewAdapter(getActivity(), list);
+        adapter = new CategoryRecyclerViewAdapter2(getActivity(), list);
         mCategoryRecyclerView.setAdapter(adapter);
-        adapter.setScrollListener(new CategoryRecyclerViewAdapter.ScrollListener() {
-            @Override
-            public void scroll(int position) {
-            }
-        });
     }
 
     @Override
