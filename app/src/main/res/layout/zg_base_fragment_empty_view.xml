@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/zg_base_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <cn.com.zangguo.shopping.widget.LoadingView
+        android:id="@+id/zg_base_fragment_empty_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <cn.com.zangguo.shopping.widget.EmptyView
+        android:id="@+id/zg_base_fragment_empty_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</android.support.constraint.ConstraintLayout>
