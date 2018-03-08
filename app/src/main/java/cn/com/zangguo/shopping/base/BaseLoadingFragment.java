@@ -20,7 +20,7 @@ import cn.com.zangguo.shopping.widget.LoadingView;
  */
 
 public abstract class BaseLoadingFragment extends BaseFragment {
-    @BindView(R.id.zg_base_fragment_container)
+
     FrameLayout mContainer;
     @BindView(R.id.zg_base_fragment_empty_loading_view)
     LoadingView mLoadingView;
@@ -32,16 +32,39 @@ public abstract class BaseLoadingFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ConstraintLayout view = (ConstraintLayout) inflater.inflate(R.layout.zg_base_fragment_empty_view, container, false);
+        mContainer = view.findViewById(R.id.zg_base_fragment_container);
+        mContainer.addView(LayoutInflater.from(mActivity).inflate(getChildViewId(), mContainer, false), ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         unbinder = ButterKnife.bind(this, view);
-        mContainer.addView(getChildView(), ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        initChildView();
+        initData();
         return view;
     }
 
-    protected abstract View getChildView();
+    protected abstract void initChildView();
+
+    protected abstract int getChildViewId();
+
+    protected abstract void initData();
+
+    public void showEmptyView(boolean isShow) {
+        if (mEmptyView == null) {
+            return;
+        }
+        mEmptyView.setVisibility(isShow ? View.VISIBLE : View.GONE);
+    }
+
+    public void showLoadingView(boolean isShow) {
+        if (mLoadingView == null) {
+            return;
+        }
+        mLoadingView.setVisibility(isShow ? View.VISIBLE : View.GONE);
+    }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        unbinder.unbind();
+        if (unbinder != null) {
+            unbinder.unbind();
+        }
     }
 }

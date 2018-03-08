@@ -14,13 +14,14 @@ import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import cn.com.zangguo.shopping.base.BaseActivity;
 import cn.com.zangguo.shopping.category.CategoryFragment;
 import cn.com.zangguo.shopping.helper.BottomNavigationViewHelper;
 import cn.com.zangguo.shopping.home.HomeFragment;
 import q.rorbin.badgeview.Badge;
 import q.rorbin.badgeview.QBadgeView;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends BaseActivity {
 
     public static final String TAG = "HomeActivity";
 
